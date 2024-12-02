@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+<!--<nav id="navigation1" class="navigation">
+  <div class="nav-header">
+    <a class="nav-brand mr-4" href="index.html"><img src="images/logo.png" alt="May Villa" height="94"></a>
+    <div class="nav-toggle"></div>
+  </div>
+  <div class="nav-menus-wrapper">
+    <ul class="nav-menu align-to-right">
+      <li><a href="index.html">Home</a></li> 
+      <li><a href="./htmlpages/about.html">About</a></li> 
+      <li><a href="./htmlpages/rooms.html">Rooms and Tariff</a></li> 
+   <!--    <li><a href="facilities/index.html">Facilities</a></li>
+      <li><a href="virtual-tour/index.html">Virtual Tour</a></li>   
+      <li><a href="./htmlpages/contact.html">Contact</a></li> 
+    </ul> 
+  </div>
+</nav>
+<style>
+  #navigation1 {
+    background-color: #ADD8E6; /* Light blue */swq  
+    padding: 10px 0; /* Optional padding for better appearance */
+  }
+
+  /* Optional: Change text and hover colors for better contrast */
+  #navigation1 .nav-menu a {
+    color: #000; /* Text color */
+    text-decoration: none;
+  }
+
+  #navigation1 .nav-menu a:hover {
+    color: #fff; /* Text color on hover */
+  }
+</style>-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+ <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">-->
+  <link rel="stylesheet" href="css/navstyle1.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <script src="js/navsticky.js" defer></script>
+
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+      text-align: center;
+    }
+    .container1 {
+      max-width: 800px;
+      margin: 20px auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+    .form-group textarea {
+      resize: vertical;
+      height: 120px;
+    }
+    button {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #555;
+    }
+    .map {
+      margin-top: 20px;
+    }
+    iframe {
+      width: 100%;
+      border: 0;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+   <nav class="nav-bar" id="navbar">
+    <div class="brand-logo">
+      <img src="./roomimages/logo1.jpg" alt="Brand Logo">
+    </div>
+    <button class="menu-toggle" onclick="toggleMenu()">Menu</button>
+    <div class="menu-wrapper">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="rooms.html">Rooms and Tariffs</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+
+  <header>
+    <h1>Contact Us</h1>
+  </header>
+  <div class="container1">
+    <h2>Get in Touch</h2>
+    <p>If you have any questions, feel free to reach out using the form below or visit us at our location.</p>
+    <form onsubmit="return validateForm()" class="row g-lg-3 gy-3">
+      <div class="form-group col-12">
+          <input type="text" class="form-control" placeholder="Enter your name" id="name" required>
+          <small id="nameError" class="text-danger"></small>
+      </div>
+      <div class="form-group col-12">
+          <input type="email" class="form-control" placeholder="Enter your email" id="email" required>
+          <small id="emailError" class="text-danger"></small>
+      </div>
+      <div class="form-group col-12">
+          <input type="text" class="form-control" placeholder="Enter your mobile number" id="mobile" required>
+          <small id="mobileError" class="text-danger"></small>
+      </div>
+      <div class="form-group col-12">
+          <input type="text" class="form-control" placeholder="Enter subject" id="subject" required>
+          <small id="subjectError" class="text-danger"></small>
+      </div>
+      <div class="form-group col-12">
+          <textarea rows="4" class="form-control" placeholder="Enter your message" id="message" required></textarea>
+          <small id="messageError" class="text-danger"></small>
+      </div>
+      <div class="form-group col-12 d-grid">
+          <button type="button" onclick="whatsapp()" class="btn btn-brand">Contact me</button>
+      </div>
+  </form>
+
+
+
+    <div class="map">
+      <h2>Our Location</h2>
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.8354345076846!2d144.95605431567765!3d-37.81720977975179!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf0727b42399f3fd3!2sVictoria%20Market!5e0!3m2!1sen!2sau!4v1600305753106!5m2!1sen!2sau"
+        width="600"
+        height="400"
+        allowfullscreen=""
+        loading="lazy">
+      </iframe>
+    </div>
+  </div>
+  <br>
+  <br>
+
+  <section class="footer">
+    <div class="footer-wrap">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="footer-wrap-b">
+                        <div class="footer-content-left">
+                            <div class="row footer-row-a align-items-center">
+                                <div class="col-md-3"><img src="images/logo1.jpg" alt="logo" class="img-fluid"></div>
+                                <div class="col-md-9">
+                                    <div class="info-footer">May Villa Hotel is located in Kodaikanal, the heart of Kodaikanal City. We welcome you to experience the hospitality and comfort that seem lost in today's fast paced world.</div>
+                                </div>
+                            </div>
+                            <div class="row footer-row-b">
+                                <div class="col-md-12">
+                                    <div class="line-footer"></div>
+                                </div>
+                            </div>
+                            <div class="row footer-row-c">
+                                <div class="col-lg-5 col-md-12 col-sm-12 footer-address">
+                                    <div class="footer-info mb-4">
+                                        <div class="footer-info-left">
+                                            <div class="fi-placeholder"></div>
+                                        </div>
+                                        <div class="footer-info-right"><p>New No. 84, Old No. 67, Kodaikanal High Road, Kodaikanal, Kodaikanal.</p>
+                                        <a href="https://maps.app.goo.gl/EYFCQrFRbYofMuRa6" class="text-primary" target="_blank" rel="noopener">Google Map</a>
+                                    </div>
+                                    </div>
+                                </div>
+                                 
+                                <div class="col-6  col-lg-3 footer-address">
+                                    
+                                <ul class="list">
+                                    <li ><a href="index.html">Home</a></li> 
+                                    <li ><a href="about.html">About</a></li> 
+                                    <li ><a href="rooms.html">Rooms and Tariff</a></li> 
+                                    <li ><a href="contact.html">Contact</a></li> 
+                                </ul> 
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="footer-content-right">
+                            <div class="open-hours-wrap">
+                                <div class="oh-title"><h3>For Reservation & Inquiry</h3></div> 
+                                <div class="reserphone">
+                                     Reservations by phone<br>
+                                     Call <span class="text-theme display-4">&nbsp;&nbsp;+918524035315</span>
+                                </div>
+    
+                                <div class="reserphone">
+                                     Email <span class="text-theme">&nbsp;&nbsp;sales@May Villa.in</span><br>
+                                     <span class="text-theme">&nbsp;&nbsp;reservation@May Villa.in</span>
+                                </div>
+     
+    
+                            </div>
+                        </div>					<div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+    </section>
+    
+    <footer>
+    <div class="container">
+        <div class="row">
+        <div class="col-md-8">Copyright &copy; 2024 - <strong>May Villa Hotel</strong> - All rights reserved.  </div>
+        </div>
+        <!--   <a href='./htmlpages/contact.html' class="cb-button" data-title="Contact Expert" data-type="Popup Enquiry" id='fc-phone'>
+         <div class='cbb-circle'></div>
+            <div class='cbb-circle-fill'></div>
+           <div class='fc-phone-label' id='FC_show_labels_phone' style="color:rgb(117, 255, 80, 0.7);">Contact Us</div>
+            <div class='cbb-circle-img'><i class="fas fa-envelope"></i></div
+
+        </a>-->
+
+
+     </div>
+    </footer>
+</body>
+
+<script>
+  function validateForm() {
+      var name = document.getElementById('name').value;
+      var email = document.getElementById('email').value;
+      var mobile = document.getElementById('mobile').value;
+      var subject = document.getElementById('subject').value;
+      var message = document.getElementById('message').value;
+
+      // Reset error messages
+      document.getElementById('nameError').innerText = '';
+      document.getElementById('emailError').innerText = '';
+      document.getElementById('mobileError').innerText = '';
+      document.getElementById('subjectError').innerText = '';
+      document.getElementById('messageError').innerText = '';
+
+      // Validate Name
+      if (name.trim() === '') {
+          document.getElementById('nameError').innerText = 'Please fill out this field.';
+          return false;
+      }
+
+      // Validate Email
+      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+          document.getElementById('emailError').innerText = 'Please enter a valid email address.';
+          return false;
+      }
+
+      // Validate Mobile Number
+      var mobileRegex = /^[0-9]{10}$/;
+      if (!mobileRegex.test(mobile)) {
+          document.getElementById('mobileError').innerText = 'Please enter a valid 10-digit mobile number.';
+          return false;
+      }
+
+      // Validate Subject
+      if (subject.trim() === '') {
+          document.getElementById('subjectError').innerText = 'Please fill out this field.';
+          return false;
+      }
+
+      // Validate Message
+      if (message.trim() === '') {
+          document.getElementById('messageError').innerText = 'Please fill out this field.';
+          return false;
+      }
+
+      return true;
+  }
+
+  function whatsapp() {
+      if (validateForm()) {
+          var names = document.getElementById("name").value;
+          var email = document.getElementById("email").value;
+          var mobile = document.getElementById("mobile").value;
+          var subject = document.getElementById("subject").value;
+          var message = document.getElementById("message").value;
+
+          var urli = "https://wa.me/918524035315?text=" +
+              "Name: " + names + "%0a" +
+              "Email: " + email + "%0a" +
+              "Mobile Number: " + mobile + "%0a" +
+              "Subject: " + subject + "%0a" +
+              "Message: " + message;
+
+          window.location.href = urli;
+      }
+    }
+</script>
+</html>
