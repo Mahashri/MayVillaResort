@@ -325,4 +325,17 @@
       }
     }
 </script>
+
+<script type="text/javascript">
+  $(document).ready(function(){$("#navbar").navigation({hidden: true});});
+  
+  $(".btn-show").click(function(){ 
+      $("#navbar").data("nav-bar").toggleOffcanvas();
+  });
+  
+  function toggleMenu() {
+    const navbar = document.getElementById('navbar');
+    navbar.classList.toggle('menu-active');
+  }
+  </script>
 </html>
