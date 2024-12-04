@@ -4339,7 +4339,7 @@ footer .footer-sosmed-icon .circle-sosmed .icons {
     color: #e0e0e0; /* Light grey color for the reviewer name */
   }
   
-  button {
+  .prev-btn, .next-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -4353,7 +4353,7 @@ footer .footer-sosmed-icon .circle-sosmed .icons {
     font-size: 1.5rem;
   }
   
-  button:hover {
+  .prev-btn:hover, .next-btn:hover {
     background: white; /* Light background on hover */
     color: #033f47;
   }
@@ -4370,11 +4370,14 @@ footer .footer-sosmed-icon .circle-sosmed .icons {
     .carousel {
       width: 95%; /* Take up more width on mobile */
       max-width: 100%; /* Full width on mobile */
+      margin-left: 5%;
+
     }
   
     .prev-btn, .next-btn {
       left: 10px; /* Adjusted for smaller screens */
       right: 10px;
+
     }
   
     .review-content {
@@ -4383,6 +4386,10 @@ footer .footer-sosmed-icon .circle-sosmed .icons {
   
     .stars {
       font-size: 1.2rem;
+    }
+
+    .slide{
+        width: auto;
     }
   }
   
