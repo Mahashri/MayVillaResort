@@ -4212,6 +4212,236 @@ footer .footer-sosmed-icon .circle-sosmed .icons {
  </div>
 
     </div>
+
+
+
+
+
+    <div class="carousel">
+        <button class="prev-btn">❮</button>
+        <div class="carousel-slide">
+            <div class="slide">
+                <div class="stars">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                </div>
+                <div class="review-content">
+                    Loved the whole experience. This was our best stay in Kodaikanal so far.
+                    <br> 
+                    The food and hospitality were beyond excellent. 
+                    <br>
+                    We will surely recommend the stay to friends and family.
+                </div>
+                <div class="reviewer-name">- Mohammed Rasik</div>
+            </div>
+    
+            <div class="slide">
+                <div class="stars">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span>
+                </div>
+                <div class="review-content">
+                    Serene and safe atmosphere. 
+                    <br>
+                    Kodaikanal lake is within walking distance, ensuring safety when roaming at night.
+                    <br>
+                     The service was awesome, and the staff were friendly.
+                </div>
+                <div class="reviewer-name">- Prakash B</div>
+            </div>
+    
+            <div class="slide">
+                <div class="stars">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span>
+                </div>
+                <div class="review-content">
+                    Located in a prime location near the lake. 
+                    <br>
+                    Great hospitality and homely food.
+                    <br> 
+                    They arrange campfires and the rooms have all basic amenities.
+                </div>
+                <div class="reviewer-name">- Sathishkumar Karunanithi</div>
+            </div>
+    
+            <div class="slide">
+                <div class="stars">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span>
+                </div>
+                <div class="review-content">
+                    We went as a team (27 people) and really enjoyed it. Hot food, campfire, and great service.
+                </div>
+                <div class="reviewer-name">- Karthick selva </div>
+            </div>
+    
+            <div class="slide">
+                <div class="stars">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                </div>
+                <div class="review-content">
+                    Had a wonderful stay. Excellent hospitality! Thanks to Raja sir and team.
+                </div>
+                <div class="reviewer-name">- Veera Puthiran</div>
+            </div>
+        </div>
+        <button class="next-btn">❯</button>
+    </div>
+    
+
+      <style>
+
+
+        
+        /* Center the body content using flexbox */
+
+  
+  .carousel {
+    position: relative;
+    width: 80%; /* Reduced width of the carousel */
+    max-width: 900px; /* Set a max width */
+    overflow: hidden;
+    background: #033f47; /* Set background color */
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    color: white; /* White font color */
+    font-weight: bold; /* Make the font bold */
+    align-items: center;
+    margin-left: 20%;
+  }
+  
+  .carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .slide {
+    min-width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .stars {
+    font-size: 1.5rem;
+    color: #ffd700;
+    margin-bottom: 10px;
+  }
+  
+  .review-content {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+  
+  .reviewer-name {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #e0e0e0; /* Light grey color for the reviewer name */
+  }
+  
+  button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #033f47; /* Dark background for buttons */
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+    z-index: 10;
+    font-size: 1.5rem;
+  }
+  
+  button:hover {
+    background: white; /* Light background on hover */
+    color: #033f47;
+  }
+  
+  .prev-btn {
+    left: 0; /* Inside the container */
+  }
+  
+  .next-btn {
+    right: 0; /* Inside the container */
+  }
+  
+  @media (max-width: 768px) {
+    .carousel {
+      width: 95%; /* Take up more width on mobile */
+      max-width: 100%; /* Full width on mobile */
+    }
+  
+    .prev-btn, .next-btn {
+      left: 10px; /* Adjusted for smaller screens */
+      right: 10px;
+    }
+  
+    .review-content {
+      font-size: 0.9rem;
+    }
+  
+    .stars {
+      font-size: 1.2rem;
+    }
+  }
+  
+        
+        </style>
+
+
+
+        <script>
+            const carouselSlide = document.querySelector('.carousel-slide');
+const slides = document.querySelectorAll('.slide');
+const prevBtn = document.querySelector('.prev-btn');
+const nextBtn = document.querySelector('.next-btn');
+
+let counter = 0;
+const size = slides[0].clientWidth;
+let autoSlideInterval;
+
+function updateCarousel() {
+  carouselSlide.style.transform = `translateX(${-size * counter}px)`;
+}
+
+function moveNext() {
+  counter = (counter + 1) % slides.length;
+  updateCarousel();
+}
+
+function movePrev() {
+  counter = (counter - 1 + slides.length) % slides.length;
+  updateCarousel();
+}
+
+// Auto-slide functionality
+function startAutoSlide() {
+  autoSlideInterval = setInterval(moveNext, 5000);
+}
+
+function stopAutoSlide() {
+  clearInterval(autoSlideInterval);
+}
+
+// Manual controls
+nextBtn.addEventListener('click', () => {
+  stopAutoSlide();
+  moveNext();
+  startAutoSlide();
+});
+
+prevBtn.addEventListener('click', () => {
+  stopAutoSlide();
+  movePrev();
+  startAutoSlide();
+});
+
+// Start auto-slide
+startAutoSlide();
+
+        </script>
+        
     <!-- Gallery Image 7
     <div class="col-lg-4 col-md-6 col-12 mb-4">
         <div class="border border-primary rounded">
