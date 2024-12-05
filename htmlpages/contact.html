@@ -142,7 +142,7 @@
     <h1>Contact Us</h1>
   </header>
   <div class="container1">
-    <h2>Get in Touch</h2>
+    <h2 id="map">Get in Touch</h2>
     <p>If you have any questions, feel free to reach out using the form below or visit us at our location.</p>
     <form onsubmit="return validateForm()" class="row g-lg-3 gy-3">
       <div class="form-group col-12">
@@ -166,21 +166,18 @@
           <small id="messageError" class="text-danger"></small>
       </div>
       <div class="form-group col-12 d-grid">
-          <button type="button" onclick="whatsapp()" class="btn btn-brand">Contact me</button>
+        <button type="button" onclick="whatsapp()" class="btn btn-brand" style="background-color: blue; color: white; border: none;">
+          Contact me
+        </button>        
       </div>
   </form>
 
 
 
     <div class="map">
-      <h2>Our Location</h2>
-      <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.8354345076846!2d144.95605431567765!3d-37.81720977975179!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf0727b42399f3fd3!2sVictoria%20Market!5e0!3m2!1sen!2sau!4v1600305753106!5m2!1sen!2sau"
-        width="600"
-        height="400"
-        allowfullscreen=""
-        loading="lazy">
-      </iframe>
+      <h2 id="map">Our Location</h2>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3926.298152242962!2d77.484533!3d10.23752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b07666307879dd9%3A0xc50c2512a28e5532!2sMay%20Villa!5e0!3m2!1sen!2sin!4v1733402522160!5m2!1sen!2sin" 
+      width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </div>
   <br>
@@ -211,7 +208,7 @@
                                             <div class="fi-placeholder"></div>
                                         </div>
                                         <div class="footer-info-right"><p>New No. 84, Old No. 67, Kodaikanal High Road, Kodaikanal, Kodaikanal.</p>
-                                        <a href="https://maps.app.goo.gl/EYFCQrFRbYofMuRa6"  id="map" class="text-primary" target="_blank" rel="noopener">Google Map</a>
+                                        <a href="https://maps.app.goo.gl/2d94PhRmciRpHBAi8?g_st=aw"  id="map" class="text-primary" target="_blank" rel="noopener">Google Map</a>
                                     </div>
                                     <br>
                                     </div>
