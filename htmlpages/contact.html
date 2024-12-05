@@ -115,6 +115,9 @@
     #phone-link:hover {
       text-decoration: none; /* Ensures no underline on hover */
     }
+    #map{
+      color: blue;
+    }
   </style>
 </head>
 <body>
@@ -208,7 +211,7 @@
                                             <div class="fi-placeholder"></div>
                                         </div>
                                         <div class="footer-info-right"><p>New No. 84, Old No. 67, Kodaikanal High Road, Kodaikanal, Kodaikanal.</p>
-                                        <a href="https://maps.app.goo.gl/EYFCQrFRbYofMuRa6" class="text-primary" target="_blank" rel="noopener">Google Map</a>
+                                        <a href="https://maps.app.goo.gl/EYFCQrFRbYofMuRa6"  id="map" class="text-primary" target="_blank" rel="noopener">Google Map</a>
                                     </div>
                                     </div>
                                 </div>
@@ -236,7 +239,9 @@
                                 </div>
     
                                 <div class="reserphone">
-                                     Email <span class="text-theme">&nbsp;&nbsp;sales@May Villa.in</span><br>
+                                  Email <a href="mailto:mayvillaraja@gmail.com" id="phone-link" class="text-theme">
+                                    &nbsp;&nbsp;mayvillaraja@gmail.com
+                                  </a><br>
                                      <span class="text-theme">&nbsp;&nbsp;reservation@May Villa.in</span>
                                 </div>
      
