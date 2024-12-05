@@ -79,13 +79,34 @@
       align-items: center;
       gap: 20px; /* Space between the GIF and image */
     }
-
+  
     .media-container embed,
     .media-container img {
       width: 400px; /* Adjust size for equal dimensions */
       height: 300px; /* Maintain aspect ratio */
       object-fit: cover; /* Ensures proper scaling of the image */
     }
+  
+    @media (max-width: 768px) { /* Mobile screens */
+      .media-container {
+        flex-direction: column-reverse; /* WebP first, image second */
+        gap: 10px; /* Reduce gap for smaller screens */
+      }
+      .media-container embed {
+        order: 0; /* Move WebP to the top */
+      }
+  
+      .media-container img {
+        order: -1; /* Default order for image */
+      }
+  
+      .media-container embed,
+      .media-container img {
+        width: 80%;
+        margin: 10px; /* Adjust to screen width */
+        height: auto; /* Maintain aspect ratio */
+      }
+    }  
   </style>
   <style>
   .image-container {
@@ -127,7 +148,7 @@
 
   <header class="hero-section">
     <div class="container text-center">
-      <h1>New May Villa</h1>
+      <h1>May Villa</h1>
       <p>Your Eco-Friendly Retreat in Kodaikanal</p>
       <a href="#about" class="btn btn-primary btn-lg">Explore More</a>
     </div>
