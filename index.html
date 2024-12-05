@@ -55,9 +55,23 @@
         -ms-overflow-style: scrollbar;
         -webkit-tap-highlight-color: transparent
     }
+    .hero-section {
+        background-image: url('./images/beautyofkodai.jpg');
+        background-size: cover;
+        background-position: center;
+        color: white;
+        padding: 100px 0;
+      }
     
+      @media (min-width: 1024px) { /* For laptop and larger screens */
+        .hero-section {
+          background-size: cover; /* Ensures image covers the section without repeating */
+          background-position: center; /* Center the image */
+          padding: 200px 0; /* Adjust padding for better aspect ratio on large screens */
+        }
+      }
     @-ms-viewport {
-        width: device-width
+        width: device-width;
     }
     
     article,
@@ -3991,14 +4005,7 @@ footer .footer-sosmed-icon .circle-sosmed .icons {
 </div>-->
     <!--     -->
     <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+    <header class="hero-section"></header>
     <div class="bg-white py-4">
         <div class="container">
             <div class="row align-items-center">
