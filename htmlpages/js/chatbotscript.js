@@ -56,11 +56,11 @@ function handleQuestion(question) {
             botResponse = `
                 We provide Fresh, Hygienic Home Cooked Meal on pre-order basis. 
                 <br>
-                <a href="images/menu_first_page.jpg" target="_blank">
-                    <img src="images/menu_first_page.jpg" alt="Food Menu 1" style="width: 100px; height: auto; margin-right: 10px;">
+                <a href="images/menu_first_page.jpg" target="_blank" class="foodMenu">
+                    <img src="../images/menu_first_page.jpg" alt="Food Menu 1" class="foodMenu" style="margin-right: 10px;">
                 </a>
-                <a href="images/menu_fs.jpg" target="_blank">
-                    <img src="images/menu_fs.jpg" alt="Food Menu 2" style="width: 100px; height: auto;">
+                <a href="images/menu_fs.jpg" target="_blank" class="foodMenu">
+                    <img src="../images/menu_fs.jpg" alt="Food Menu 2" class="foodMenu">
                 </a><br>
                 *Strictly NO COOKING inside the property
                     `;
@@ -68,7 +68,7 @@ function handleQuestion(question) {
             
             
         case 'Other Details':
-            botResponse = 'Feel free to contact:<br>May Villa: +91 8524035315 ';
+            botResponse = 'Feel free to contact:<br>May Villa: <a href="tel:+918524035315">+91 8524035315</a> ';
             break;
     }
 

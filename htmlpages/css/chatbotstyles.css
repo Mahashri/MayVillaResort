@@ -199,6 +199,10 @@ ul {
     background: #0056b3;
 }
 
+.foodMenu{
+    max-width: 100%;
+    height: auto;
+}
 
 @keyframes fadeIn {
     from {
@@ -213,5 +217,11 @@ ul {
 @media(max-width: 768px) {
     .chatbot{
         right:10px;
+        width: 300px;
+    }
+    .foodMenu{
+        width: 90%;
+        height: auto;
+        display: block;
     }
 }
