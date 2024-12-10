@@ -215,90 +215,98 @@ footer .footer-sosmed-icon .circle-sosmed .icons {
   vertical-align: middle; }
 
   #fc-phone .cbb-circle-img {
-      font-style: normal !important;
-      font-weight: normal !important;
-      speak: none;
-      text-align: center;
-      line-height: 60px !important;
-      font-size: 36px !important;
-      color: white;
-  }
+    font-style: normal !important;
+    font-weight: normal !important;
+    speak: none;
+    text-align: center;
+    line-height: 60px !important;
+    font-size: 36px !important;
+    color: white;
+    position: fixed; /* Keeps it fixed in the viewport */
+    bottom: 30px;    /* Aligns with the bottom margin of the chatbot */
+    right: 60px;    /* Leaves space to the right for the chatbot */
+    z-index: 999;
+}
 
-  .cb-button {
-      cursor: pointer;
-      position: fixed;
-  }
+.cb-button {
+  cursor: pointer;
+  position: relative; /* Relative within the WhatsApp container */
+  background-color: transparent;
+  border-radius: 100%;
+  width: 60px; /* Adjusted size */
+  height: 60px; /* Adjusted size */
+}
 
-  .cb-button {
-      background-color: transparent;
-      border-radius: 100% !important;
-      width: 200px;
-      height: 200px;
-      right: 0px;
-      bottom: 0px;
-      z-index: 888;
-  }
+/* .cb-button {
+    background-color: transparent;
+    border-radius: 100% !important; 
+    width: 200px;
+    height: 200px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 1000;
+} */
 
-  .cb-button .cbb-circle {
-      background-color: rgba(127, 186, 0, 0);
-      border: 1px solid rgba(117, 255, 80, 0.7);
-      border-radius: 100% !important;
-      opacity: .5;
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      width: 160px;
-      height: 160px;
-      -webkit-animation: animation1 2.2s infinite ease-in-out;
-      animation: animation1 2.2s infinite ease-in-out;
-      -ms-animation: animation1 2.2s ease-out;
-      -ms-animation-iteration-count: infinite;
-  }
+/* .cb-button .cbb-circle {
+    background-color: rgba(127, 186, 0, 0);
+    border: 1px solid rgba(117, 255, 80, 0.7);
+    border-radius: 100% !important;
+    opacity: .5;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 160px;
+    height: 160px;
+    -webkit-animation: animation1 2.2s infinite ease-in-out;
+    animation: animation1 2.2s infinite ease-in-out;
+    -ms-animation: animation1 2.2s ease-out;
+    -ms-animation-iteration-count: infinite;
+}
 
-  .cb-button:hover .cbb-circle {
-      border: 1px solid #75ff50;
-  }
+.cb-button:hover .cbb-circle {
+    border: 1px solid #75ff50;
+} */
 
-  .cb-button .cbb-circle-fill {
-      background-color: rgba(117, 255, 80, 0.3);
-      border: 1px solid #7fba00;
-      border-radius: 100% !important;
-      opacity: 1;
-      position: absolute;
-      top: 50px;
-      left: 50px;
-      width: 100px;
-      height: 100px;
-      -webkit-animation: animation2 1.7s infinite ease-in-out;
-      animation: animation2 1.7s infinite ease-in-out;
-      -ms-animation: animation2 1.7s ease-out;
-      -ms-animation-iteration-count: infinite;
-  }
+.cb-button .cbb-circle-fill {
+    background-color: rgba(117, 255, 80, 0.3);
+    border: 1px solid #7fba00;
+    border-radius: 100% !important;
+    opacity: 1;
+    position: fixed;
+    bottom: 10px;
+    right: 40px;
+    width: 100px;
+    height: 100px;
+    -webkit-animation: animation2 1.7s infinite ease-in-out;
+    animation: animation2 1.7s infinite ease-in-out;
+    -ms-animation: animation2 1.7s ease-out;
+    -ms-animation-iteration-count: infinite;
+}
 
-  .cb-button:hover .cbb-circle-fill {
-      background-color: rgba(117, 255, 80, 0.5);
-      border: 1px solid #75ff50;
-  }
+/* .cb-button:hover .cbb-circle-fill {
+    background-color: rgba(117, 255, 80, 0.5);
+    border: 1px solid #75ff50;
+} */
 
-  .cb-button .cbb-circle-img {
-      background-color: #7fba00;
-      border: 1px solid #7fab00;
-      border-radius: 100% !important;
-      position: absolute;
-      top: 70px;
-      left: 70px;
-      width: 60px;
-      height: 60px;
-  }
+.cb-button .cbb-circle-img {
+    background-color: #7fba00;
+    border: 1px solid #7fab00;
+    border-radius: 100% !important;
+    position: relative;
+    /* bottom: 110px; */
+    /* left: 60px; */
+    width: 60px;
+    height: 60px;
+}
 
-  .cb-button:hover .cbb-circle-img {
-      background-color: #4FDC25;
-      border: 1px solid #75eb50;
-      -webkit-animation: animation3 1.1s infinite ease-in-out;
-      animation: animation3 1.1s infinite ease-in-out;
-      -ms-animation: animation3 1.1s ease-out;
-      -ms-animation-iteration-count: infinite;
-  }
+.cb-button:hover .cbb-circle-img {
+    background-color: #4FDC25;
+    border: 1px solid #75eb50;
+    -webkit-animation: animation3 1.1s infinite ease-in-out;
+    animation: animation3 1.1s infinite ease-in-out;
+    -ms-animation: animation3 1.1s ease-out;
+    -ms-animation-iteration-count: infinite;
+}
 
     @-webkit-keyframes animation1 {
       0% {

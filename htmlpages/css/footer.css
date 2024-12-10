@@ -222,24 +222,32 @@ footer .footer-sosmed-icon .circle-sosmed .icons {
       line-height: 60px !important;
       font-size: 36px !important;
       color: white;
+      position: fixed; /* Keeps it fixed in the viewport */
+      bottom: 30px;    /* Aligns with the bottom margin of the chatbot */
+      right: 60px;    /* Leaves space to the right for the chatbot */
+      z-index: 999;
   }
 
   .cb-button {
-      cursor: pointer;
-      position: fixed;
+    cursor: pointer;
+    position: relative; /* Relative within the WhatsApp container */
+    background-color: transparent;
+    border-radius: 100%;
+    width: 60px; /* Adjusted size */
+    height: 60px; /* Adjusted size */
   }
 
-  .cb-button {
+  /* .cb-button {
       background-color: transparent;
-      border-radius: 100% !important;
+      border-radius: 100% !important; 
       width: 200px;
       height: 200px;
       right: 0px;
       bottom: 0px;
-      z-index: 888;
-  }
+      z-index: 1000;
+  } */
 
-  .cb-button .cbb-circle {
+  /* .cb-button .cbb-circle {
       background-color: rgba(127, 186, 0, 0);
       border: 1px solid rgba(117, 255, 80, 0.7);
       border-radius: 100% !important;
@@ -257,16 +265,16 @@ footer .footer-sosmed-icon .circle-sosmed .icons {
 
   .cb-button:hover .cbb-circle {
       border: 1px solid #75ff50;
-  }
+  } */
 
   .cb-button .cbb-circle-fill {
       background-color: rgba(117, 255, 80, 0.3);
       border: 1px solid #7fba00;
       border-radius: 100% !important;
       opacity: 1;
-      position: absolute;
-      top: 50px;
-      left: 50px;
+      position: fixed;
+      bottom: 10px;
+      right: 40px;
       width: 100px;
       height: 100px;
       -webkit-animation: animation2 1.7s infinite ease-in-out;
@@ -275,18 +283,18 @@ footer .footer-sosmed-icon .circle-sosmed .icons {
       -ms-animation-iteration-count: infinite;
   }
 
-  .cb-button:hover .cbb-circle-fill {
+  /* .cb-button:hover .cbb-circle-fill {
       background-color: rgba(117, 255, 80, 0.5);
       border: 1px solid #75ff50;
-  }
+  } */
 
   .cb-button .cbb-circle-img {
       background-color: #7fba00;
       border: 1px solid #7fab00;
       border-radius: 100% !important;
-      position: absolute;
-      top: 70px;
-      left: 70px;
+      position: relative;
+      /* bottom: 110px; */
+      /* left: 60px; */
       width: 60px;
       height: 60px;
   }
@@ -424,13 +432,13 @@ footer .footer-sosmed-icon .circle-sosmed .icons {
       }
     }
   
-    .fc-phone-label {
+    /* .fc-phone-label {
       text-align: center;
       margin-top: 136px;
       color: #7FBA00;
       font-weight: bold;
       font-size: 14px;
-    }
+    } */
 
     @media only screen and (max-width: 768px) {
       section.footer .footer-wrap-b .footer-content-right {
