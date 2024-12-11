@@ -100,6 +100,9 @@ function displayFAQs() {
                 <li><button class="question-button" onclick="showAnswer('How far from Main lake?')">How far from Main lake?</button></li>
                 <li><button class="question-button" onclick="showAnswer('How many people can be accomodated max at a villa?')">How many people can be accomodated max at a villa?</button></li>
                 <li><button class="question-button" onclick="showAnswer('Is Cooking Allowed?')">Is Cooking Allowed?</button></li>
+                <li><button class="question-button" onclick="showAnswer('Are Pets Allowed?')">Are Pets Allowed?</button></li>
+                <li><button class="question-button" onclick="showAnswer('Is It Private Or Shared Rooms?')">Is It Private Or Shared Rooms?</button></li>
+                <li><button class="question-button" onclick="showAnswer('Cab Service?')">Cab Service?</button></li>
             </ul>
         </div><br><br>
     `;
@@ -142,6 +145,19 @@ function showAnswer(question) {
         case 'Is Cooking Allowed?':
             botAnswer = 'No. Currenty Cooking is not allowed inside the property but Fresh and Hygienic Homestyle Food can be provided on pre order basis. please refer the food availability section in chatbot for more details';
             break;
+
+        case 'Are Pets Allowed?':
+            botAnswer = 'No. Pets are not allowed inside the property .';
+            break;
+
+        case 'Is It Private Or Shared Rooms?':
+            botAnswer = 'May villa has private rooms with sepearate doors and not shared.';
+            break;
+
+        case 'Cab Service?':
+            botAnswer ='can arrange local site scene as well as kodai to other cities like Madurai, Trichy , Coimbatore.';
+            break;
+    
     }
 
     // Append user message
