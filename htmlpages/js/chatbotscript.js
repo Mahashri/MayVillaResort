@@ -57,10 +57,10 @@ function handleQuestion(question) {
                 We provide Fresh, Hygienic Home Cooked Meal on pre-order basis. 
                 <br>
                 <a href="images/menu_first_page.jpg" target="_blank" class="foodMenu">
-                    <img src="../images/menu_first_page.jpg" alt="Food Menu 1" class="foodMenu" style="margin-right: 10px;">
+                    <img src="../htmlpages/images/menu_first_page.jpg" alt="Food Menu 1" class="foodMenu" style="margin-right: 10px;">
                 </a>
                 <a href="images/menu_fs.jpg" target="_blank" class="foodMenu">
-                    <img src="../images/menu_fs.jpg" alt="Food Menu 2" class="foodMenu">
+                    <img src="../htmlpages/images/menu_fs.jpg" alt="Food Menu 2" class="foodMenu">
                 </a><br>
                 *Strictly NO COOKING inside the property
                     `;
