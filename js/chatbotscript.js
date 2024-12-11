@@ -144,7 +144,7 @@ function showAnswer(question) {
             break;
 
         case 'Are Pets Allowed?':
-            botAnswer = 'No. Pets are not allowed inside the property .';
+            botAnswer = 'No. Pets are not allowed inside the property .Incase if you are bringing pets, extra cost 500 Rs will be charged for small pets. Big dogs are not allowed completely.';
             break;
     
         case 'Is It Private Or Shared Rooms?':
