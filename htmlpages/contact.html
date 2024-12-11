@@ -152,7 +152,7 @@
   <div class="container1">
     <h2 id="map">Get in Touch</h2>
     <p>If you have any questions, feel free to reach out using the form below or visit us at our location.</p>
-    <form onsubmit="return validateForm()" class="row g-lg-3 gy-3">
+    <form id="contactForm" class="row g-lg-3 gy-3">
       <div class="form-group col-12">
           <input type="text" class="form-control" placeholder="Enter your name" id="name" required>
           <small id="nameError" class="text-danger"></small>
@@ -174,11 +174,13 @@
           <small id="messageError" class="text-danger"></small>
       </div>
       <div class="form-group col-12 d-grid">
-        <button type="button" onclick="whatsapp()" class="btn btn-brand" style="background-color: rgb(20, 139, 243); color: white; border: none;">
-          Contact me
-        </button>        
+          <button type="submit" class="btn btn-brand" style="background-color: rgb(20, 139, 243); color: white; border: none;">
+              Contact me
+          </button>
       </div>
   </form>
+  
+  
 
 
 
@@ -305,73 +307,81 @@
 </body>
 
 <script>
-  function validateForm() {
-      var name = document.getElementById('name').value;
-      var email = document.getElementById('email').value;
-      var mobile = document.getElementById('mobile').value;
-      var subject = document.getElementById('subject').value;
-      var message = document.getElementById('message').value;
+  document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();  // Prevent form submission
 
-      // Reset error messages
-      document.getElementById('nameError').innerText = '';
-      document.getElementById('emailError').innerText = '';
-      document.getElementById('mobileError').innerText = '';
-      document.getElementById('subjectError').innerText = '';
-      document.getElementById('messageError').innerText = '';
+    if (validateForm()) {
+        sendWhatsAppMessage();
+    }
+});
 
-      // Validate Name
-      if (name.trim() === '') {
-          document.getElementById('nameError').innerText = 'Please fill out this field.';
-          return false;
-      }
+function validateForm() {
+    var name = document.getElementById('name').value.trim();
+    var email = document.getElementById('email').value.trim();
+    var mobile = document.getElementById('mobile').value.trim();
+    var subject = document.getElementById('subject').value.trim();
+    var message = document.getElementById('message').value.trim();
 
-      // Validate Email
-      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailRegex.test(email)) {
-          document.getElementById('emailError').innerText = 'Please enter a valid email address.';
-          return false;
-      }
+    let isValid = true;
 
-      // Validate Mobile Number
-      var mobileRegex = /^[0-9]{10}$/;
-      if (!mobileRegex.test(mobile)) {
-          document.getElementById('mobileError').innerText = 'Please enter a valid 10-digit mobile number.';
-          return false;
-      }
+    // Clear previous errors
+    document.getElementById('nameError').innerText = '';
+    document.getElementById('emailError').innerText = '';
+    document.getElementById('mobileError').innerText = '';
+    document.getElementById('subjectError').innerText = '';
+    document.getElementById('messageError').innerText = '';
 
-      // Validate Subject
-      if (subject.trim() === '') {
-          document.getElementById('subjectError').innerText = 'Please fill out this field.';
-          return false;
-      }
+    // Validation checks
+    if (name === '') {
+        document.getElementById('nameError').innerText = 'Please fill out this field.';
+        isValid = false;
+    }
 
-      // Validate Message
-      if (message.trim() === '') {
-          document.getElementById('messageError').innerText = 'Please fill out this field.';
-          return false;
-      }
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        document.getElementById('emailError').innerText = 'Please enter a valid email address.';
+        isValid = false;
+    }
 
-      return true;
-  }
+    var mobileRegex = /^[0-9]{10}$/;
+    if (!mobileRegex.test(mobile)) {
+        document.getElementById('mobileError').innerText = 'Please enter a valid 10-digit mobile number.';
+        isValid = false;
+    }
 
-  function whatsapp() {
-      if (validateForm()) {
-          var names = document.getElementById("name").value;
-          var email = document.getElementById("email").value;
-          var mobile = document.getElementById("mobile").value;
-          var subject = document.getElementById("subject").value;
-          var message = document.getElementById("message").value;
+    if (subject === '') {
+        document.getElementById('subjectError').innerText = 'Please fill out this field.';
+        isValid = false;
+    }
 
-          var urli = "https://wa.me/918524035315?text=" +
-              "Name: " + names + "%0a" +
-              "Email: " + email + "%0a" +
-              "Mobile Number: " + mobile + "%0a" +
-              "Subject: " + subject + "%0a" +
-              "Message: " + message;
+    if (message === '') {
+        document.getElementById('messageError').innerText = 'Please fill out this field.';
+        isValid = false;
+    }
 
-          window.location.href = urli;
-      }
-    }
+    return isValid;
+}
+
+function sendWhatsAppMessage() {
+    var name = encodeURIComponent(document.getElementById('name').value.trim());
+    var email = encodeURIComponent(document.getElementById('email').value.trim());
+    var mobile = encodeURIComponent(document.getElementById('mobile').value.trim());
+    var subject = encodeURIComponent(document.getElementById('subject').value.trim());
+    var message = encodeURIComponent(document.getElementById('message').value.trim());
+
+    // Construct the WhatsApp URL
+    var whatsappUrl = `https://wa.me/918524035315?text=
+        Name: ${name}%0a
+        Email: ${email}%0a
+        Mobile Number: ${mobile}%0a
+        Subject: ${subject}%0a
+        Message: ${message}`;
+
+    // Redirect to WhatsApp directly
+    window.location.href = whatsappUrl;
+}
+
+
 </script>
 
 <script type="text/javascript">
