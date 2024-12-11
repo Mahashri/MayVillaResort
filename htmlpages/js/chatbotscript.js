@@ -52,19 +52,19 @@ function handleQuestion(question) {
         case 'Nearby Tourist Locations':
             botResponse = `<b>Here are some nearby tourist locations:<br><div>${touristLocations.replace(/\n/g, '<br>')}</div></b>`;
             break;
-        case 'Food Availability Details':
-            botResponse = `
-                We provide Fresh, Hygienic Home Cooked Meal on pre-order basis. 
-                <br>
-                <a href="images/menu_first_page.jpg" target="_blank" class="foodMenu">
-                    <img src="../htmlpages/images/menu_first_page.jpg" alt="Food Menu 1" class="foodMenu" style="margin-right: 10px;">
-                </a>
-                <a href="images/menu_fs.jpg" target="_blank" class="foodMenu">
-                    <img src="../htmlpages/images/menu_fs.jpg" alt="Food Menu 2" class="foodMenu">
-                </a><br>
-                *Strictly NO COOKING inside the property
-                    `;
-            break;
+            case 'Food Availability Details':
+                botResponse = `
+                    We provide Fresh, Hygienic Home Cooked Meal on pre-order basis. 
+                    <br>
+                    <a href="images/menu_first_page.jpg" target="_blank" class="foodMenu">
+        <img src="images/menu_first_page.jpg" alt="Food Menu 1" class="foodMenu" style="margin-right: 10px;">
+    </a>
+    <a href="images/menu_fs.jpg" target="_blank" class="foodMenu">
+        <img src="images/menu_fs.jpg" alt="Food Menu 2" class="foodMenu">
+    </a>
+                `;
+                break;
+            
             
             
         case 'Other Details':
