@@ -33,3 +33,10 @@ The current enquiry flow places submitted form values into a WhatsApp URL. Encod
 
 ## Project status
 Website enquiry prototype. An enquiry is not a confirmed booking.
+
+
+---
+
+## Live Demo
+
+[Open the deployed application](https://mahashri.github.io/MayVillaResort/)
